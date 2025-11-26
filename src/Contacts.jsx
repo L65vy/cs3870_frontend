@@ -8,7 +8,7 @@ const Contacts = () => {
     useEffect(() => {
         const fetchContacts = async () => {
             try {
-                const response = await fetch("http://localhost:3000/contacts");
+                const response = await fetch("https://cs3870-backend-effl.onrender.com/contacts");
                 if (!response.ok) {
                     throw new Error("Failed to fetch contacts");
                 }
@@ -24,7 +24,7 @@ const Contacts = () => {
     const showOneContact = async () => {
         try {
             const encodedName = encodeURIComponent(searchName);
-            const response = await fetch(`http://localhost:3000/contacts/${encodedName}`);
+            const response = await fetch(`https://cs3870-backend-effl.onrender.com/contacts/${encodedName}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }

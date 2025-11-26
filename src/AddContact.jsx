@@ -17,7 +17,7 @@ export default function AddContact() {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/contacts", { // Ensure the port is correct
+            const res = await fetch("https://cs3870-backend-effl.onrender.com/contacts", { // Ensure the port is correct
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

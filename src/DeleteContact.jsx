@@ -16,7 +16,7 @@ function DeleteContact() {
 
         try {
             const encodedName = encodeURIComponent(trimmedName);
-            const res = await fetch(`http://localhost:3000/contacts/${encodedName}`, {
+            const res = await fetch(`https://cs3870-backend-effl.onrender.com/contacts/${encodedName}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
